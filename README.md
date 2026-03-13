@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Little Angel Senior Secondary School Website
 
-## Getting Started
+This repository contains a Next.js website build for Little Angel Senior Secondary School. It is structured as a responsive school information hub with dedicated sections for admissions, academics, school life, gallery content, notices, and contact operations.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 with the App Router
+- TypeScript
+- Tailwind CSS v4
+- Built-in Next.js metadata, sitemap, and robots support for SEO
+
+## Implemented Scope
+
+- Home page with hero slider, principal's welcome, latest notices, quick links, and school-life highlights
+- Dedicated pages for About Us, Academics, Life at LAS, Gallery, Admissions, and Contact Us
+- Admissions inquiry form backed by a local JSON storage layer at `data/inquiries.json`
+- SEO-ready metadata plus generated `sitemap.xml` and `robots.txt`
+- Responsive header, footer, and school-branded design system using navy, gold, and white
+
+## Development
+
+Run the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app runs at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For a production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Content Handoff Items
 
-To learn more about Next.js, take a look at the following resources:
+The following placeholders should be replaced with school-provided content before launch:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- High-resolution campus, classroom, event, and student photography
+- Faculty and leadership biographies with approved titles and portraits
+- Final address, phone numbers, extensions, and official email contacts
+- Real academic calendar PDF and confirmed event dates
+- Final fee values and admissions policy copy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Production Notes
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Configure HTTPS and weekly automated backups at the hosting provider or deployment platform.
+- Replace the local inquiry storage layer with a managed database or CMS-backed workflow if the school requires multi-user administration.
+- Confirm domain and hosting details for the school's final `.edu` or approved TLD setup.

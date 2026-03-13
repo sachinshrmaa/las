@@ -36,6 +36,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local app data
+/data/inquiries.json
+
+# editor settings
+.vscode/*
+!.vscode/tasks.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
