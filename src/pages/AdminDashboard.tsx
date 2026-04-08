@@ -180,57 +180,59 @@ const AdminDashboard = () => {
     <div className="min-h-screen bg-slate-50">
       <Navbar />
 
-      <section className="border-b border-slate-200 bg-white">
-        <div className="container py-10">
-          <p className="text-xs font-semibold uppercase tracking-wider text-green-700">
-            Admin Panel
-          </p>
-          <h1 className="mt-2 text-3xl font-bold text-slate-900 md:text-4xl">
-            Content Dashboard
-          </h1>
-          <p className="mt-3 max-w-2xl text-sm text-slate-600 md:text-base">
-            Manage website updates for news, events, and gallery photos.
-            {hasSupabaseConfig
-              ? " Changes are saved to Supabase and sync across users."
-              : " Supabase is not configured yet; currently using local browser storage."}
-          </p>
+      {(!hasSupabaseConfig || sessionEmail) && (
+        <section className="border-b border-slate-200 bg-white">
+          <div className="container py-10">
+            <p className="text-xs font-semibold uppercase tracking-wider text-green-700">
+              Admin Panel
+            </p>
+            <h1 className="mt-2 text-3xl font-bold text-slate-900 md:text-4xl">
+              Content Dashboard
+            </h1>
+            <p className="mt-3 max-w-2xl text-sm text-slate-600 md:text-base">
+              Manage website updates for news, events, and gallery photos.
+              {hasSupabaseConfig
+                ? " Changes are saved to Supabase and sync across users."
+                : " Supabase is not configured yet; currently using local browser storage."}
+            </p>
 
-          {hasSupabaseConfig && (
-            <div className="mt-4 rounded-lg border border-green-200 bg-green-50 p-3 text-sm text-green-800">
-              {sessionEmail
-                ? `Signed in as ${sessionEmail}`
-                : "Please sign in to manage content."}
-            </div>
-          )}
+            {hasSupabaseConfig && (
+              <div className="mt-4 rounded-lg border border-green-200 bg-green-50 p-3 text-sm text-green-800">
+                {sessionEmail
+                  ? `Signed in as ${sessionEmail}`
+                  : "Please sign in to manage content."}
+              </div>
+            )}
 
-          <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <p className="text-xs uppercase tracking-wide text-slate-500">
-                News
-              </p>
-              <p className="mt-1 text-2xl font-bold text-slate-900">
-                {counts.news}
-              </p>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <p className="text-xs uppercase tracking-wide text-slate-500">
-                Events
-              </p>
-              <p className="mt-1 text-2xl font-bold text-slate-900">
-                {counts.events}
-              </p>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              <p className="text-xs uppercase tracking-wide text-slate-500">
-                Gallery Photos
-              </p>
-              <p className="mt-1 text-2xl font-bold text-slate-900">
-                {counts.gallery}
-              </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+                <p className="text-xs uppercase tracking-wide text-slate-500">
+                  News
+                </p>
+                <p className="mt-1 text-2xl font-bold text-slate-900">
+                  {counts.news}
+                </p>
+              </div>
+              <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+                <p className="text-xs uppercase tracking-wide text-slate-500">
+                  Events
+                </p>
+                <p className="mt-1 text-2xl font-bold text-slate-900">
+                  {counts.events}
+                </p>
+              </div>
+              <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+                <p className="text-xs uppercase tracking-wide text-slate-500">
+                  Gallery Photos
+                </p>
+                <p className="mt-1 text-2xl font-bold text-slate-900">
+                  {counts.gallery}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {authLoading && (
         <section className="container py-10">

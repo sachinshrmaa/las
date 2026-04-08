@@ -3,45 +3,6 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { fetchContentStore, type GalleryItem } from "@/lib/contentStore";
-import galleryCampus from "@/assets/gallery-campus.jpg";
-import galleryClassroom from "@/assets/gallery-classroom.jpg";
-import galleryCultural from "@/assets/gallery-cultural.jpg";
-import galleryLab from "@/assets/gallery-lab.jpg";
-import galleryLibrary from "@/assets/gallery-library.jpg";
-import gallerySports from "@/assets/gallery-sports.jpg";
-
-const galleryItems = [
-  {
-    src: galleryCampus,
-    title: "Campus Overview",
-    desc: "Main grounds and building spaces designed for safety and discipline.",
-  },
-  {
-    src: galleryClassroom,
-    title: "Classroom Learning",
-    desc: "Student-centric classrooms with focus on active participation.",
-  },
-  {
-    src: galleryLab,
-    title: "Science & Practical Labs",
-    desc: "Practical exposure in physics, chemistry, and biology labs.",
-  },
-  {
-    src: galleryLibrary,
-    title: "Library Resources",
-    desc: "A growing reading environment supporting language and research habits.",
-  },
-  {
-    src: gallerySports,
-    title: "Sports Activities",
-    desc: "Team games and fitness activities for all-round development.",
-  },
-  {
-    src: galleryCultural,
-    title: "Cultural Events",
-    desc: "Celebrations and stage activities that build confidence and creativity.",
-  },
-];
 
 const Gallery = () => {
   const [adminGalleryItems, setAdminGalleryItems] = useState<GalleryItem[]>([]);
@@ -51,15 +12,6 @@ const Gallery = () => {
       setAdminGalleryItems(data.gallery);
     });
   }, []);
-
-  const allGalleryItems = [
-    ...adminGalleryItems.map((item) => ({
-      src: item.src,
-      title: item.title,
-      desc: item.desc,
-    })),
-    ...galleryItems,
-  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -86,7 +38,7 @@ const Gallery = () => {
 
       <section className="container py-12 md:py-16">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {allGalleryItems.map((item) => (
+          {adminGalleryItems.map((item) => (
             <article
               key={`${item.title}-${item.src}`}
               className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
@@ -107,6 +59,11 @@ const Gallery = () => {
               </div>
             </article>
           ))}
+          {adminGalleryItems.length === 0 && (
+            <div className="md:col-span-2 lg:col-span-3 rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-600">
+              No gallery photos found in database.
+            </div>
+          )}
         </div>
       </section>
 

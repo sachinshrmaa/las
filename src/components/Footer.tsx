@@ -127,10 +127,10 @@ const Footer = () => (
                   l === "Admin"
                     ? "/admin"
                     : col.heading === "About"
-                    ? "/about"
-                    : col.heading === "Admissions"
-                      ? "/admissions"
-                      : "/gallery"
+                      ? "/about"
+                      : col.heading === "Admissions"
+                        ? "/admissions"
+                        : "/gallery"
                 }
                 className="school-footer-link"
               >

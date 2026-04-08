@@ -121,7 +121,7 @@ function useCountUp(target: number, duration = 2000, start = false) {
 export default function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [statsVisible, setStatsVisible] = useState(false);
-  const [newsItems, setNewsItems] = useState<string[]>(notices);
+  const [newsItems, setNewsItems] = useState<string[]>([]);
   const [eventItems, setEventItems] = useState<
     { title: string; date: string; location: string }[]
   >([]);
@@ -133,18 +133,14 @@ export default function Index() {
 
   useEffect(() => {
     fetchContentStore().then((data) => {
-      if (data.news.length > 0) {
-        setNewsItems(data.news.map((n) => n.title).slice(0, 6));
-      }
-      if (data.events.length > 0) {
-        setEventItems(
-          data.events.slice(0, 3).map((event) => ({
-            title: event.title,
-            date: event.date,
-            location: event.location,
-          })),
-        );
-      }
+      setNewsItems(data.news.map((n) => n.title));
+      setEventItems(
+        data.events.map((event) => ({
+          title: event.title,
+          date: event.date,
+          location: event.location,
+        })),
+      );
     });
   }, []);
 
@@ -622,28 +618,36 @@ export default function Index() {
               <div
                 style={{ display: "flex", flexDirection: "column", gap: 10 }}
               >
-                {newsItems.map((notice, i) => (
-                  <div key={i} className="notice-item">
-                    <CircleCheck
-                      style={{
-                        width: 16,
-                        height: 16,
-                        flexShrink: 0,
-                        color: "var(--primary)",
-                        marginTop: 2,
-                      }}
-                    />
-                    <span
-                      style={{
-                        fontSize: 14,
-                        lineHeight: 1.6,
-                        color: "var(--text)",
-                      }}
-                    >
-                      {notice}
+                {newsItems.length > 0 ? (
+                  newsItems.map((notice, i) => (
+                    <div key={i} className="notice-item">
+                      <CircleCheck
+                        style={{
+                          width: 16,
+                          height: 16,
+                          flexShrink: 0,
+                          color: "var(--primary)",
+                          marginTop: 2,
+                        }}
+                      />
+                      <span
+                        style={{
+                          fontSize: 14,
+                          lineHeight: 1.6,
+                          color: "var(--text)",
+                        }}
+                      >
+                        {notice}
+                      </span>
+                    </div>
+                  ))
+                ) : (
+                  <div className="notice-item">
+                    <span style={{ fontSize: 14, color: "var(--muted)" }}>
+                      No notices available.
                     </span>
                   </div>
-                ))}
+                )}
               </div>
               <Link
                 to="/about"
@@ -743,11 +747,7 @@ export default function Index() {
                         (event) =>
                           `${event.title} • ${event.date} • ${event.location}`,
                       )
-                    : [
-                        "Form issue: 8:30 AM – 2:00 PM (Mon–Sat)",
-                        "Entrance interaction: As per schedule",
-                        "Required: Birth certificate, marksheet, photos",
-                      ]
+                    : ["No events available."]
                   ).map((item, i) => (
                     <div
                       key={i}

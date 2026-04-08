@@ -22,9 +22,11 @@ const groupedLinks = [
     label: "About",
     href: "/about",
     sub: [
-      { label: "About Us", href: "/about" },
-      { label: "Leadership", href: "/about" },
-      { label: "Awards & Achievements", href: "/about" },
+      { label: "About the School", href: "/about#about-school" },
+      { label: "Our Legacy", href: "/about#legacy" },
+      { label: "Vision & Mission", href: "/about#vision-mission" },
+      { label: "Our Philosophy", href: "/about#philosophy" },
+      { label: "Leadership & Continuity", href: "/about#leadership" },
     ],
   },
   {
