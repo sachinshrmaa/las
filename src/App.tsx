@@ -8,7 +8,6 @@ import About from "./pages/About.tsx";
 import Gallery from "./pages/Gallery.tsx";
 import Admissions from "./pages/Admissions.tsx";
 import Contact from "./pages/Contact.tsx";
-import AdminDashboard from "./pages/AdminDashboard.tsx";
 import Affiliations from "./pages/Affiliations.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -27,7 +26,6 @@ const App = () => (
           <Route path="/admissions" element={<Admissions />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/affiliations" element={<Affiliations />} />
-          <Route path="/admin" element={<AdminDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

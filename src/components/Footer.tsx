@@ -102,7 +102,7 @@ const Footer = () => (
         {[
           {
             heading: "About",
-            links: ["About Us", "Leadership", "Awards", "Affiliation", "Admin"],
+            links: ["About Us", "Leadership", "Awards", "Affiliation"],
           },
           {
             heading: "Academics",
@@ -124,13 +124,11 @@ const Footer = () => (
               <Link
                 key={l}
                 to={
-                  l === "Admin"
-                    ? "/admin"
-                    : col.heading === "About"
-                      ? "/about"
-                      : col.heading === "Admissions"
-                        ? "/admissions"
-                        : "/gallery"
+                  col.heading === "About"
+                    ? "/about"
+                    : col.heading === "Admissions"
+                      ? "/admissions"
+                      : "/gallery"
                 }
                 className="school-footer-link"
               >
