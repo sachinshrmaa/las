@@ -59,6 +59,7 @@ const groupedLinks = [
       { label: "Events", href: "/gallery" },
     ],
   },
+  { label: "Affiliations", href: "/affiliations", sub: null },
   { label: "Contact", href: "/contact", sub: null },
 ];
 
