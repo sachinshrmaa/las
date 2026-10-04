@@ -58,7 +58,7 @@ const Affiliations = () => {
         className="relative overflow-hidden"
         style={{
           background:
-            "linear-gradient(120deg, rgba(15,23,42,0.88) 0%, rgba(63,122,58,0.82) 52%, rgba(77,148,70,0.84) 100%), url('/la.jpeg') center/cover no-repeat",
+            "linear-gradient(120deg, rgba(15,23,42,0.88) 0%, rgba(92,0,24,0.82) 52%, rgba(128,0,32,0.84) 100%), url('/la.jpeg') center/cover no-repeat",
         }}
       >
         <div className="container py-14 md:py-20 text-white">
@@ -68,7 +68,7 @@ const Affiliations = () => {
           <h1 className="mt-5 text-3xl font-bold md:text-5xl">
             Affiliations &amp; Documents
           </h1>
-          <p className="mt-3 max-w-2xl text-base text-green-100 md:text-lg">
+          <p className="mt-3 max-w-2xl text-base text-rose-100 md:text-lg">
             View and download all affiliation certificates, government
             recognitions, and mandatory compliance documents of Little Angel
             Senior Secondary School.
@@ -87,7 +87,7 @@ const Affiliations = () => {
                 onClick={() => setActiveCategory(cat)}
                 className={`rounded-full border px-4 py-1.5 text-xs font-semibold tracking-wide transition-all duration-200 ${
                   activeCategory === cat
-                    ? "border-[#4d9446] bg-[#4d9446] text-white shadow-sm"
+                    ? "border-[#800020] bg-[#800020] text-white shadow-sm"
                     : "border-slate-200 bg-white text-slate-600 hover:border-slate-300 hover:bg-slate-50"
                 }`}
               >
@@ -104,7 +104,7 @@ const Affiliations = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search documents…"
-              className="h-10 w-full rounded-xl border border-slate-200 bg-white pl-9 pr-4 text-sm text-slate-700 shadow-sm outline-none transition-colors focus:border-[#4d9446]/40 focus:ring-2 focus:ring-[#4d9446]/10"
+              className="h-10 w-full rounded-xl border border-slate-200 bg-white pl-9 pr-4 text-sm text-slate-700 shadow-sm outline-none transition-colors focus:border-[#800020]/40 focus:ring-2 focus:ring-[#800020]/10"
             />
           </div>
         </div>
@@ -114,14 +114,14 @@ const Affiliations = () => {
           {filtered.map((doc) => (
             <article
               key={doc.title}
-              className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-900/[0.06]"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-rose-950/[0.06]"
             >
               {/* Top accent bar */}
-              <div className="h-1 w-full bg-gradient-to-r from-[#3f7a3a] to-[#4d9446]" />
+              <div className="h-1 w-full bg-gradient-to-r from-[#5c0018] to-[#800020]" />
 
               <div className="flex flex-1 flex-col p-6">
                 <div className="mb-3 flex items-start justify-between gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-green-50 text-[#4d9446] shadow-sm">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-rose-50 text-[#800020] shadow-sm">
                     <FileText className="h-5 w-5" />
                   </div>
                   <span
@@ -146,7 +146,7 @@ const Affiliations = () => {
                     href={doc.pdfUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#3f7a3a] to-[#4d9446] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:from-[#356830] hover:to-[#3f7a3a]"
+                    className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#5c0018] to-[#800020] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:from-[#4a0013] hover:to-[#5c0018]"
                   >
                     <ExternalLink className="h-4 w-4" />
                     View PDF
@@ -154,7 +154,7 @@ const Affiliations = () => {
                   <a
                     href={doc.pdfUrl}
                     download
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 transition-colors hover:border-slate-300 hover:bg-slate-50 hover:text-[#4d9446]"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-500 transition-colors hover:border-slate-300 hover:bg-slate-50 hover:text-[#800020]"
                     title="Download"
                   >
                     <Download className="h-4 w-4" />
@@ -174,10 +174,10 @@ const Affiliations = () => {
 
       {/* CTA */}
       <section className="bg-slate-50 py-12">
-        <div className="container rounded-2xl border border-green-200 bg-gradient-to-r from-green-700 to-green-900 p-8 text-white">
+        <div className="container rounded-2xl border border-rose-200 bg-gradient-to-r from-rose-900 to-rose-950 p-8 text-white">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold tracking-wider text-green-100">
+              <p className="text-xs font-semibold tracking-wider text-rose-100">
                 NEED MORE INFORMATION?
               </p>
               <h3 className="mt-1 text-2xl font-bold">

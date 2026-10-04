@@ -32,7 +32,7 @@ const About = () => {
         className="relative overflow-hidden"
         style={{
           background:
-            "linear-gradient(120deg, rgba(15,23,42,0.88) 0%, rgba(63,122,58,0.82) 52%, rgba(77,148,70,0.84) 100%), url('/la.jpeg') center/cover no-repeat",
+            "linear-gradient(120deg, rgba(15,23,42,0.88) 0%, rgba(92,0,24,0.82) 52%, rgba(128,0,32,0.84) 100%), url('/la.jpeg') center/cover no-repeat",
         }}
       >
         <div className="container py-16 md:py-24 text-white">
@@ -42,7 +42,7 @@ const About = () => {
           <h1 className="mt-5 max-w-4xl text-4xl font-bold leading-tight md:text-5xl">
             Rooted in Rural Purpose, Growing with Generations
           </h1>
-          <p className="mt-4 max-w-3xl text-base text-green-100 md:text-lg">
+          <p className="mt-4 max-w-3xl text-base text-rose-100 md:text-lg">
             Since 1997, Little Angel Senior Secondary School has worked to make
             quality English-medium education accessible, affordable, and
             meaningful for rural families.
@@ -227,12 +227,12 @@ const About = () => {
         id="leadership"
         className="container scroll-mt-24 py-12 md:py-16"
       >
-        <article className="rounded-2xl border border-green-200 bg-gradient-to-r from-green-700 to-green-900 p-8 text-white">
-          <p className="text-xs font-semibold tracking-wider text-green-100">
+        <article className="rounded-2xl border border-rose-200 bg-gradient-to-r from-rose-900 to-rose-950 p-8 text-white">
+          <p className="text-xs font-semibold tracking-wider text-rose-100">
             LEADERSHIP & CONTINUITY
           </p>
           <h2 className="mt-2 text-3xl font-bold">Leadership & Continuity</h2>
-          <div className="mt-5 space-y-4 text-sm leading-relaxed text-green-50 md:text-base">
+          <div className="mt-5 space-y-4 text-sm leading-relaxed text-rose-50 md:text-base">
             <p>
               The foundation of Little Angel Senior Secondary School rests on a
               vision shaped by lived experience, commitment, and service to the
@@ -263,10 +263,10 @@ const About = () => {
       </section>
 
       <section className="container py-12 md:py-16">
-        <div className="rounded-2xl border border-green-200 bg-gradient-to-r from-green-700 to-green-900 p-8 text-white">
+        <div className="rounded-2xl border border-rose-200 bg-gradient-to-r from-rose-900 to-rose-950 p-8 text-white">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold tracking-wider text-green-100">
+              <p className="text-xs font-semibold tracking-wider text-rose-100">
                 NEXT STEP
               </p>
               <h3 className="mt-1 text-2xl font-bold">

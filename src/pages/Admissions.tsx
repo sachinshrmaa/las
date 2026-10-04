@@ -79,7 +79,7 @@ const Admissions = () => {
         className="relative overflow-hidden"
         style={{
           background:
-            "linear-gradient(120deg, rgba(15,23,42,0.86) 0%, rgba(63,122,58,0.8) 50%, rgba(77,148,70,0.84) 100%), url('/la.jpeg') center/cover no-repeat",
+            "linear-gradient(120deg, rgba(15,23,42,0.86) 0%, rgba(92,0,24,0.8) 50%, rgba(128,0,32,0.84) 100%), url('/la.jpeg') center/cover no-repeat",
         }}
       >
         <div className="container py-14 md:py-20 text-white">
@@ -87,7 +87,7 @@ const Admissions = () => {
             ADMISSIONS 2026-27
           </span>
           <h1 className="mt-5 text-3xl font-bold md:text-5xl">Admissions</h1>
-          <p className="mt-3 max-w-2xl text-base text-green-100 md:text-lg">
+          <p className="mt-3 max-w-2xl text-base text-rose-100 md:text-lg">
             Begin your child&apos;s journey at Little Angel Senior Secondary
             School. We welcome students from Nursery to Class XII.
           </p>
@@ -105,8 +105,8 @@ const Admissions = () => {
               key={i}
               className="rounded-xl border border-slate-200 bg-white p-6 text-center shadow-sm"
             >
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-50">
-                <step.icon className="h-6 w-6 text-green-700" />
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-rose-50">
+                <step.icon className="h-6 w-6 text-rose-900" />
               </div>
               <div className="mb-1 text-xs font-bold uppercase tracking-wide text-amber-600">
                 Step {i + 1}
@@ -207,7 +207,7 @@ const Admissions = () => {
               <Button
                 type="submit"
                 disabled={submitting}
-                className="w-full gap-2 bg-green-700 hover:bg-green-800"
+                className="w-full gap-2 bg-rose-900 hover:bg-rose-950"
               >
                 <Send size={16} />
                 {submitting ? "Submitting..." : "Submit Enquiry"}
@@ -218,7 +218,7 @@ const Admissions = () => {
               Need help with the process?{" "}
               <Link
                 to="/contact"
-                className="font-semibold text-green-700 hover:text-green-800"
+                className="font-semibold text-rose-900 hover:text-rose-950"
               >
                 Speak with admissions office
               </Link>

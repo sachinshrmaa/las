@@ -169,8 +169,8 @@ export default function Index() {
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
         * { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-          --primary: #4d9446;
-          --primary-dark: #3f7a3a;
+          --primary: #800020;
+          --primary-dark: #5c0018;
           --accent: #f59e0b;
           --accent-light: #fef3c7;
           --bg: #fff;
@@ -183,7 +183,7 @@ export default function Index() {
         a { color: inherit; text-decoration: none; }
         .hero-bg {
           background:
-            linear-gradient(125deg, rgba(15, 23, 42, 0.8) 0%, rgba(77, 148, 70, 0.68) 55%, rgba(63, 122, 58, 0.75) 100%),
+            linear-gradient(125deg, rgba(15, 23, 42, 0.8) 0%, rgba(128, 0, 32, 0.68) 55%, rgba(92, 0, 24, 0.75) 100%),
             url("/la.jpeg") center/cover no-repeat;
           position: relative;
           overflow: hidden;
@@ -205,8 +205,8 @@ export default function Index() {
         .stat-card:hover { transform: translateY(-3px); background: rgba(255,255,255,0.13); }
         .section-label {
           display: inline-flex; align-items: center; gap: 6px;
-          background: #effaf0; color: var(--primary);
-          border: 1px solid #cce8c8; border-radius: 100px;
+          background: #fdf2f4; color: var(--primary);
+          border: 1px solid #e8c8cf; border-radius: 100px;
           padding: 4px 14px; font-size: 12px; font-weight: 600;
           letter-spacing: 0.06em; text-transform: uppercase;
         }
@@ -216,7 +216,7 @@ export default function Index() {
           box-shadow: 0 2px 12px rgba(0,0,0,0.04);
           transition: box-shadow 0.2s, transform 0.2s;
         }
-        .card:hover { box-shadow: 0 8px 32px rgba(77,148,70,0.1); transform: translateY(-2px); }
+        .card:hover { box-shadow: 0 8px 32px rgba(128,0,32,0.1); transform: translateY(-2px); }
         .btn-primary {
           background: var(--primary); color: #fff;
           padding: 12px 24px; border-radius: 10px; font-weight: 600; font-size: 14px;
@@ -231,24 +231,24 @@ export default function Index() {
           display: inline-flex; align-items: center; gap: 6px;
           transition: all 0.15s; cursor: pointer;
         }
-        .btn-outline:hover { background: #effaf0; }
+        .btn-outline:hover { background: #fdf2f4; }
         .notice-item {
           display: flex; align-items: flex-start; gap: 12px;
           padding: 14px 16px; border-radius: 10px;
           border: 1px solid var(--border); background: var(--surface);
           transition: border-color 0.15s, background 0.15s;
         }
-        .notice-item:hover { border-color: #a8d6a3; background: #f1faef; }
+        .notice-item:hover { border-color: #d6a3b0; background: #fdf2f4; }
         .why-card {
           background: var(--bg); border: 1px solid var(--border);
           border-radius: 16px; padding: 28px 24px;
           box-shadow: 0 2px 8px rgba(0,0,0,0.04);
           transition: all 0.25s;
         }
-        .why-card:hover { border-color: var(--primary); box-shadow: 0 8px 32px rgba(77,148,70,0.12); transform: translateY(-4px); }
+        .why-card:hover { border-color: var(--primary); box-shadow: 0 8px 32px rgba(128,0,32,0.12); transform: translateY(-4px); }
         .icon-box {
           width: 48px; height: 48px; border-radius: 12px;
-          background: #effaf0; color: var(--primary);
+          background: #fdf2f4; color: var(--primary);
           display: flex; align-items: center; justify-content: center;
           margin-bottom: 16px;
         }
@@ -262,7 +262,7 @@ export default function Index() {
         .faq-q:hover { background: var(--surface); }
         .faq-a { padding: 0 20px 18px; font-size: 14px; color: var(--muted); line-height: 1.7; }
         .cta-banner {
-          background: linear-gradient(135deg, #4d9446 0%, #3f7a3a 100%);
+          background: linear-gradient(135deg, #800020 0%, #5c0018 100%);
           position: relative; overflow: hidden;
         }
         .cta-banner::before {
@@ -275,7 +275,7 @@ export default function Index() {
           display: flex; align-items: flex-start; gap: 14px;
           background: var(--bg); transition: all 0.2s;
         }
-        .stream-card:hover { border-color: #a8d6a3; background: #f1faef; }
+        .stream-card:hover { border-color: #d6a3b0; background: #fdf2f4; }
         .stream-icon { font-size: 22px; line-height: 1; margin-top: 2px; }
         .contact-card {
           background: var(--bg); border: 1px solid var(--border);
@@ -285,7 +285,7 @@ export default function Index() {
         }
         .contact-icon {
           width: 40px; height: 40px; border-radius: 10px;
-          background: #effaf0; color: var(--primary);
+          background: #fdf2f4; color: var(--primary);
           display: flex; align-items: center; justify-content: center;
           flex-shrink: 0;
         }
@@ -387,7 +387,7 @@ export default function Index() {
       `}</style>
 
       {/* Utility Bar
-      <div style={{ background: "#3f7a3a", padding: "8px 0" }}>
+      <div style={{ background: "#5c0018", padding: "8px 0" }}>
         <div
           style={{
             maxWidth: 1200,
@@ -404,12 +404,12 @@ export default function Index() {
                 <a
                   key={l}
                   href="#"
-                  style={{ color: "#d5f0d1", fontSize: 12, fontWeight: 500 }}
+                  style={{ color: "#f5d0d8", fontSize: 12, fontWeight: 500 }}
                   onMouseEnter={(e) =>
                     ((e.target as HTMLElement).style.color = "#fff")
                   }
                   onMouseLeave={(e) =>
-                    ((e.target as HTMLElement).style.color = "#d5f0d1")
+                    ((e.target as HTMLElement).style.color = "#f5d0d8")
                   }
                 >
                   {l}
@@ -418,10 +418,10 @@ export default function Index() {
             )}
           </div>
           <div style={{ display: "flex", gap: 10 }} className="hide-mobile">
-            <span style={{ color: "#d5f0d1", fontSize: 12 }}>
+            <span style={{ color: "#f5d0d8", fontSize: 12 }}>
               📞 +91 98765 43210
             </span>
-            <span style={{ color: "#d5f0d1", fontSize: 12 }}>
+            <span style={{ color: "#f5d0d8", fontSize: 12 }}>
               ✉️ office@littleangel.edu.in
             </span>
           </div>
@@ -479,7 +479,7 @@ export default function Index() {
               marginTop: 18,
               maxWidth: 580,
               fontSize: 16,
-              color: "#d5f0d1",
+              color: "#f5d0d8",
               lineHeight: 1.75,
             }}
           >
@@ -507,7 +507,7 @@ export default function Index() {
                 <div
                   style={{
                     fontSize: 11,
-                    color: "#b9e1b5",
+                    color: "#e1b5c0",
                     marginTop: 4,
                     fontWeight: 500,
                     textTransform: "uppercase",
@@ -727,7 +727,7 @@ export default function Index() {
                   style={{
                     marginTop: 10,
                     fontSize: 13.5,
-                    color: "#d5f0d1",
+                    color: "#f5d0d8",
                     lineHeight: 1.65,
                   }}
                 >
@@ -872,7 +872,7 @@ export default function Index() {
                   style={{
                     width: 16,
                     height: 16,
-                    color: "#16a34a",
+                    color: "#800020",
                     flexShrink: 0,
                   }}
                 />
@@ -1179,7 +1179,7 @@ export default function Index() {
                 fontWeight: 700,
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
-                color: "#d5f0d1",
+                color: "#f5d0d8",
                 marginBottom: 10,
               }}
             >

@@ -34,7 +34,7 @@ const Contact = () => {
         className="relative overflow-hidden"
         style={{
           background:
-            "linear-gradient(120deg, rgba(15,23,42,0.86) 0%, rgba(63,122,58,0.8) 50%, rgba(77,148,70,0.84) 100%), url('/la.jpeg') center/cover no-repeat",
+            "linear-gradient(120deg, rgba(15,23,42,0.86) 0%, rgba(92,0,24,0.8) 50%, rgba(128,0,32,0.84) 100%), url('/la.jpeg') center/cover no-repeat",
         }}
       >
         <div className="container py-14 md:py-20 text-white">
@@ -42,7 +42,7 @@ const Contact = () => {
             CONTACT & SUPPORT
           </span>
           <h1 className="mt-5 text-3xl font-bold md:text-5xl">Contact Us</h1>
-          <p className="mt-3 max-w-2xl text-base text-green-100 md:text-lg">
+          <p className="mt-3 max-w-2xl text-base text-rose-100 md:text-lg">
             Reach out with any questions about admissions, academics, school
             timings, or campus visits.
           </p>
@@ -103,7 +103,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={submitting}
-                  className="w-full gap-2 bg-green-700 hover:bg-green-800"
+                  className="w-full gap-2 bg-rose-900 hover:bg-rose-950"
                 >
                   <Send size={16} />
                   {submitting ? "Sending..." : "Send Message"}
@@ -119,8 +119,8 @@ const Contact = () => {
               </h3>
               <div className="space-y-5">
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-50">
-                    <MapPin className="h-5 w-5 text-green-700" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-rose-50">
+                    <MapPin className="h-5 w-5 text-rose-900" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-slate-900">
@@ -132,8 +132,8 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-50">
-                    <Phone className="h-5 w-5 text-green-700" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-rose-50">
+                    <Phone className="h-5 w-5 text-rose-900" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-slate-900">
@@ -143,8 +143,8 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-50">
-                    <Mail className="h-5 w-5 text-green-700" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-rose-50">
+                    <Mail className="h-5 w-5 text-rose-900" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-slate-900">
@@ -156,8 +156,8 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-50">
-                    <Clock className="h-5 w-5 text-green-700" />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-rose-50">
+                    <Clock className="h-5 w-5 text-rose-900" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-slate-900">

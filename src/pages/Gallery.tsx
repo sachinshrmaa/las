@@ -21,7 +21,7 @@ const Gallery = () => {
         className="relative overflow-hidden"
         style={{
           background:
-            "linear-gradient(120deg, rgba(15,23,42,0.88) 0%, rgba(63,122,58,0.82) 52%, rgba(77,148,70,0.84) 100%), url('/la.jpeg') center/cover no-repeat",
+            "linear-gradient(120deg, rgba(15,23,42,0.88) 0%, rgba(92,0,24,0.82) 52%, rgba(128,0,32,0.84) 100%), url('/la.jpeg') center/cover no-repeat",
         }}
       >
         <div className="container py-14 md:py-20 text-white">
@@ -29,7 +29,7 @@ const Gallery = () => {
             CAMPUS GLIMPSES
           </span>
           <h1 className="mt-5 text-3xl font-bold md:text-5xl">Photo Gallery</h1>
-          <p className="mt-3 max-w-2xl text-base text-green-100 md:text-lg">
+          <p className="mt-3 max-w-2xl text-base text-rose-100 md:text-lg">
             A visual walkthrough of academics, infrastructure, and student life
             at Little Angel Senior Secondary School.
           </p>
@@ -68,10 +68,10 @@ const Gallery = () => {
       </section>
 
       <section className="bg-slate-50 py-12">
-        <div className="container rounded-2xl border border-green-200 bg-gradient-to-r from-green-700 to-green-900 p-8 text-white">
+        <div className="container rounded-2xl border border-rose-200 bg-gradient-to-r from-rose-900 to-rose-950 p-8 text-white">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold tracking-wider text-green-100">
+              <p className="text-xs font-semibold tracking-wider text-rose-100">
                 VISIT THE CAMPUS
               </p>
               <h3 className="mt-1 text-2xl font-bold">
